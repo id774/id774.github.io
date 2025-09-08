@@ -2,11 +2,16 @@
 
 ## Overview
 
-This repository contains the source code of the [id774.net](https://id774.net) website.
-The site is designed to be extremely simple, text-oriented, and based on Bootstrap 5.
+This repository contains the source code of the website available at **[id774.net](https://id774.net)**.
+For convenience, the same content is also published on GitHub Pages at **[id774.github.io](https://id774.github.io/)**.
+However, the **canonical site is id774.net**. When linking or referencing this website, please prefer the id774.net domain.
 
-It consists of a Japanese and an English index page, along with an external links page.
-Deployment is typically managed under `/var/www/html/id774.github.io` with a `current` symbolic link for switching versions.
+The content may also be deployed to other servers for development or internal management purposes.
+These additional environments are not intended as public entry points but help test and maintain the site.
+
+The site is intentionally simple, text-oriented, and built with Bootstrap 5.
+It consists of Japanese and English index pages, along with an external links page.
+Deployment on my server is typically managed under `/var/www/html/id774.github.io` with a `current` symbolic link for switching versions.
 
 ## Deployment
 
