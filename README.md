@@ -6,22 +6,22 @@ This repository contains the source code of the [id774.net](https://id774.net) w
 The site is designed to be extremely simple, text-oriented, and based on Bootstrap 5.
 
 It consists of a Japanese and an English index page, along with an external links page.
-Deployment is typically managed under `/var/www/html/id774net` with a `current` symbolic link for switching versions.
+Deployment is typically managed under `/var/www/html/id774.github.io` with a `current` symbolic link for switching versions.
 
 ## Deployment
 
 To deploy the site on your server:
 
 ```sh
-git clone https://github.com/id774/id774net.git
-cd id774net
-# Copy or symlink to /var/www/html/id774net and point /var/www/html/current to it
+git clone https://github.com/id774/id774.github.io.git
+cd id774.github.io
+# Copy or symlink to /var/www/html/id774.github.io and point /var/www/html/current to it
 ```
 
 Example with symlink switching:
 
 ```sh
-cd /var/www/html/ && ln -snf id774net current
+cd /var/www/html/ && ln -snf id774.github.io current
 ```
 
 This allows atomic switching between versions by updating the `current` symlink.
