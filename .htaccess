@@ -20,7 +20,7 @@ RedirectMatch 403 (^|/)\.(git|hg|svn|bzr)(/|$)
 
 # Deny common documentation files (case-insensitive)
 # Examples: README.md, LICENSE.txt, CHANGELOG, AUTHORS, etc.
-<FilesMatch "(?i)^(README|LICENSE|CHANGELOG|CHANGES|HISTORY|COPYING|AUTHORS|CONTRIBUTING|INSTALL|UPGRADE|TODO|COMMIT|NOTICE)(\..*)?$">
+<FilesMatch "(?i)^(README|CHANGELOG|CHANGES|HISTORY|AUTHORS|CONTRIBUTING|INSTALL|UPGRADE|TODO|COMMIT|NOTICE)(\..*)?$">
     Require all denied
 </FilesMatch>
 
