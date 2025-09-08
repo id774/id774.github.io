@@ -26,6 +26,17 @@ cd /var/www/html/ && ln -snf id774net current
 
 This allows atomic switching between versions by updating the `current` symlink.
 
+### Apache Configuration
+
+Make sure your VirtualHost is configured so that the DocumentRoot points to `/var/www/html/current`,
+and that `.htaccess` directives are enabled with `AllowOverride All`.
+
+After editing the Apache configuration, always test and restart:
+
+```sh
+sudo apache2ctl -t && sudo systemctl restart apache2.service
+```
+
 ## License
 
 All public web content that I publish is licensed under the following conditions, unless otherwise noted:
