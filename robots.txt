@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: /.git/
+Disallow: /entry/wp-admin/
+Disallow: /entry/wp-includes/
+Disallow: /entry/wp-login.php
+Disallow: /entry/xmlrpc.php
+Disallow: /entry/wp-content/cache/
+Disallow: /entry/wp-content/plugins/
