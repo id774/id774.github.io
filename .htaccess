@@ -1,12 +1,59 @@
+# ------------------------------------------------------------
+# MIME types
+# ------------------------------------------------------------
 AddType text/cache-manifest .manifest
-RedirectMatch 403 /\.htaccess
+
+# ------------------------------------------------------------
+# Basic hardening
+# ------------------------------------------------------------
+
+# Disable directory listing
+Options -Indexes
+
+# Deny access to hidden files and VCS metadata
+# - .htaccess, .htpasswd, .ht*
+# - .env files
+# - .git / .hg / .svn / .bzr
+RedirectMatch 403 /\.ht
+RedirectMatch 403 /\.env
+RedirectMatch 403 /(\.git|\.hg|\.svn|\.bzr)(/|$)
+
+# Deny common documentation files (case-insensitive)
+# Examples: README.md, LICENSE.txt, CHANGELOG, AUTHORS, etc.
+<FilesMatch "(?i)^(README|LICENSE|CHANGELOG|CHANGES|HISTORY|COPYING|AUTHORS|CONTRIBUTING|INSTALL|UPGRADE|TODO|COMMIT|NOTICE)(\..*)?$">
+    Require all denied
+</FilesMatch>
+
+# Deny development and build configuration files
+# Examples: package.json, composer.json, Gemfile, Dockerfile, Makefile, etc.
+<FilesMatch "(?i)^(composer(\.lock)?\.json|package(-lock)?\.json|yarn\.lock|pnpm-lock\.yaml|Gemfile(\.lock)?|Makefile|Dockerfile|docker-compose\.ya?ml|Procfile|Vagrantfile|tsconfig\.json|webpack(\.config)?\.js|babel\.config\.js|rollup(\.config)?\.js|vite(\.config)?\.js)$">
+    Require all denied
+</FilesMatch>
+
+# Deny source map files (.map) if not intended for public access
+<FilesMatch "\.map$">
+    Require all denied
+</FilesMatch>
+
+# Explicitly deny .gitignore
 RedirectMatch 403 /\.gitignore
-RedirectMatch 403 /\.git
+
+# ------------------------------------------------------------
+# (Optional) Add specific files to block here if needed
+# Example:
+# <Files "deploy.sh">
+#     Require all denied
+# </Files>
+
+# ------------------------------------------------------------
+# WordPress front controller (keep existing rules)
+# ------------------------------------------------------------
 <IfModule mod_rewrite.c>
-RewriteEngine On
-RewriteBase /
-RewriteRule ^index\.php$ - [L]
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule . /index.php [L]
+    RewriteEngine On
+    RewriteBase /
+    RewriteRule ^index\.php$ - [L]
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule . /index.php [L]
 </IfModule>
+
