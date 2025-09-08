@@ -6,3 +6,13 @@ Disallow: /entry/wp-login.php
 Disallow: /entry/xmlrpc.php
 Disallow: /entry/wp-content/cache/
 Disallow: /entry/wp-content/plugins/
+
+# Block common documentation files
+Disallow: /README
+Disallow: /README.md
+Disallow: /README.txt
+Disallow: /LICENSE
+Disallow: /CHANGELOG
+Disallow: /CHANGELOG.md
+Disallow: /INSTALL
+Disallow: /INSTALL.md
