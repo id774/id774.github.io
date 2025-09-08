@@ -14,9 +14,9 @@ Options -Indexes
 # - .htaccess, .htpasswd, .ht*
 # - .env files
 # - .git / .hg / .svn / .bzr
-RedirectMatch 403 /\.ht
-RedirectMatch 403 /\.env
-RedirectMatch 403 /(\.git|\.hg|\.svn|\.bzr)(/|$)
+RedirectMatch 403 (^|/)\.ht
+RedirectMatch 403 (^|/)\.env
+RedirectMatch 403 (^|/)\.(git|hg|svn|bzr)(/|$)
 
 # Deny common documentation files (case-insensitive)
 # Examples: README.md, LICENSE.txt, CHANGELOG, AUTHORS, etc.
@@ -36,7 +36,7 @@ RedirectMatch 403 /(\.git|\.hg|\.svn|\.bzr)(/|$)
 </FilesMatch>
 
 # Explicitly deny .gitignore
-RedirectMatch 403 /\.gitignore
+RedirectMatch 403 (^|/)\.gitignore
 
 # ------------------------------------------------------------
 # (Optional) Add specific files to block here if needed
