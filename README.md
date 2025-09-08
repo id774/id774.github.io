@@ -21,7 +21,7 @@ cd id774net
 Example with symlink switching:
 
 ```sh
-sudo ln -sfn /var/www/html/id774net /var/www/html/current
+cd /var/www/html/ && ln -snf id774net current
 ```
 
 This allows atomic switching between versions by updating the `current` symlink.
