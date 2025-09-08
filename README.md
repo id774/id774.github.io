@@ -30,7 +30,7 @@ This allows atomic switching between versions by updating the `current` symlink.
 
 All public web content that I publish is licensed under the following conditions, unless otherwise noted:
 
-- **Code**: dual licensed under [GPL version 3](doc/LICENSE) or [LGPL version 3](doc/COPYING.LESSER)
+- **Code**: dual licensed under [GPL version 3](https://www.gnu.org/licenses/gpl-3.0.html) or [LGPL version 3](https://www.gnu.org/licenses/lgpl-3.0.html)
 - **Documentation, photos, and images**: licensed under [CC BY-ND 4.0 International](https://creativecommons.org/licenses/by-nd/4.0/)
 
 For full details, please refer to the license texts:
