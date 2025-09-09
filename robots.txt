@@ -1,5 +1,7 @@
 User-agent: *
 Disallow: /.git/
+Disallow: /doc/
+Disallow: /bootstrap5/
 Disallow: /entry/wp-admin/
 Disallow: /entry/wp-includes/
 Disallow: /entry/wp-login.php
