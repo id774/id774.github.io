@@ -18,3 +18,5 @@ Disallow: /CHANGELOG
 Disallow: /CHANGELOG.md
 Disallow: /INSTALL
 Disallow: /INSTALL.md
+
+Sitemap: https://blog.id774.net/entry/sitemap.xml
