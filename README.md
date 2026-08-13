@@ -51,7 +51,7 @@ All public web content that I publish is licensed under the following conditions
 
 For full details, please refer to the license texts:
 
-- [LICENSE](doc/LICENSE)
+- [LICENSE](doc/LICENSE.md)
 - [COPYING](doc/COPYING)
 - [COPYING.LESSER](doc/COPYING.LESSER)
 - [CC-BY-ND-4.0.txt](doc/CC-BY-ND-4.0.txt) (offline copy of the license text)
