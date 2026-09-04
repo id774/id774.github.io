@@ -11,6 +11,7 @@ These additional environments are not intended as public entry points but help t
 
 The site is intentionally simple, text-oriented, and built with Bootstrap 5.
 It consists of Japanese and English index pages, along with an external links page.
+The English top page (`/` and `/index.html`) automatically redirects visitors whose browser's first preferred language is Japanese to the Japanese top page, unless they arrived there via the site's own English link from the Japanese page.
 Deployment on my server is typically managed under `/var/www/html/id774.github.io` with a `current` symbolic link for switching versions.
 
 ## Deployment
