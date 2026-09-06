@@ -19,7 +19,9 @@
     return null;
   }
 
-  function isFromJapaneseTopPage() {
+  var EXCLUDED_REFERRER_PATHS = ["/index-ja.html", "/external.html"];
+
+  function isFromExcludedReferrer() {
     var referrer = document.referrer;
     if (!referrer) {
       return false;
@@ -31,13 +33,13 @@
       return false;
     }
     return referrerUrl.origin === location.origin &&
-      referrerUrl.pathname === "/index-ja.html";
+      EXCLUDED_REFERRER_PATHS.indexOf(referrerUrl.pathname) !== -1;
   }
 
   if (!isJapaneseTag(getPreferredLanguage())) {
     return;
   }
-  if (isFromJapaneseTopPage()) {
+  if (isFromExcludedReferrer()) {
     return;
   }
   location.replace("/index-ja.html" + location.search + location.hash);
