@@ -43,6 +43,12 @@ After editing the Apache configuration, always test and restart:
 sudo apache2ctl -t && sudo systemctl restart apache2.service
 ```
 
+## Branch Naming
+
+This repository uses `master` as its primary branch name.
+
+The name is used solely as a technical identifier, following the long-standing convention historically used by Git. It does not express or imply any association with racism, slavery, discrimination, or any political or social ideology.
+
 ## License
 
 All public web content that I publish is licensed under the following conditions, unless otherwise noted:
@@ -56,7 +62,3 @@ For full details, please refer to the license texts:
 - [COPYING](doc/COPYING)
 - [COPYING.LESSER](doc/COPYING.LESSER)
 - [CC-BY-ND-4.0.txt](doc/CC-BY-ND-4.0.txt) (offline copy of the license text)
-
-This repository uses `master` as its primary branch name.
-
-The name is used solely as a technical identifier, following the long-standing convention historically used by Git. It does not express or imply any association with racism, slavery, discrimination, or any political or social ideology.
