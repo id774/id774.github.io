@@ -14,10 +14,6 @@ It consists of Japanese and English index pages, along with an external links pa
 The English top page (`/` and `/index.html`) automatically redirects visitors whose browser's first preferred language is Japanese to the Japanese top page, unless they arrived there via the site's own English link from the Japanese top page or the external links page.
 Deployment on my server is typically managed under `/var/www/html/id774.github.io` with a `current` symbolic link for switching versions.
 
-This repository uses `master` as its primary branch name.
-
-The name is used solely as a technical identifier, following the long-standing convention historically used by Git. It does not express or imply any association with racism, slavery, discrimination, or any political or social ideology.
-
 ## Deployment
 
 To deploy the site on your server:
@@ -46,6 +42,12 @@ After editing the Apache configuration, always test and restart:
 ```sh
 sudo apache2ctl -t && sudo systemctl restart apache2.service
 ```
+
+## Primary Branch
+
+This repository uses `master` as its primary branch name.
+
+The name is used solely as a technical identifier, following the long-standing convention historically used by Git. It does not express or imply any association with racism, slavery, discrimination, or any political or social ideology.
 
 ## License
 
