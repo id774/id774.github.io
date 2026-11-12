@@ -2,21 +2,24 @@
 
 ## Overview
 
-This repository contains the source code of the website available at **[id774.net](https://id774.net)**.
-For convenience, the same content is also published on GitHub Pages at **[id774.github.io](https://id774.github.io/)**.
-However, the **canonical site is id774.net**. When linking or referencing this website, please prefer the id774.net domain.
+This repository contains the source code of the website available at
+**[id774.net](https://id774.net)**. For convenience, the same content is also
+published on GitHub Pages at **[id774.github.io](https://id774.github.io/)**.
+However, the **canonical site is id774.net**. When linking or referencing this
+website, please prefer the id774.net domain.
 
-The content may also be deployed to other servers for development or internal management purposes.
-These additional environments are not intended as public entry points but help test and maintain the site.
+The content may also be deployed to other servers for development or internal
+management purposes. These additional environments are not intended as public
+entry points but help test and maintain the site.
 
-The site is intentionally simple, text-oriented, and built with Bootstrap 5.
-It consists of Japanese and English index pages, along with an external links page.
-The English top page (`/` and `/index.html`) automatically redirects visitors whose browser's first preferred language is Japanese to the Japanese top page, unless they arrived there via the site's own English link from the Japanese top page or the external links page.
-Deployment on my server is typically managed under `/var/www/html/id774.github.io` with a `current` symbolic link for switching versions.
-
-This repository uses `master` as its primary branch name.
-
-The name is used solely as a technical identifier, following the long-standing convention historically used by Git. It does not express or imply any association with racism, slavery, discrimination, or any political or social ideology.
+The site is intentionally simple, text-oriented, and built with Bootstrap 5. It
+consists of Japanese and English index pages, along with an external links page.
+The English top page (`/` and `/index.html`) automatically redirects visitors
+whose browser's first preferred language is Japanese to the Japanese top page,
+unless they arrived there via the site's own English link from the Japanese top
+page or the external links page. Deployment on my server is typically managed
+under `/var/www/html/id774.github.io` with a `current` symbolic link for
+switching versions.
 
 ## Deployment
 
@@ -38,8 +41,9 @@ This allows atomic switching between versions by updating the `current` symlink.
 
 ### Apache Configuration
 
-Make sure your VirtualHost is configured so that the DocumentRoot points to `/var/www/html/current`,
-and that `.htaccess` directives are enabled with `AllowOverride All`.
+Make sure your VirtualHost is configured so that the DocumentRoot points to
+`/var/www/html/current`, and that `.htaccess` directives are enabled with
+`AllowOverride All`.
 
 After editing the Apache configuration, always test and restart:
 
@@ -47,12 +51,25 @@ After editing the Apache configuration, always test and restart:
 sudo apache2ctl -t && sudo systemctl restart apache2.service
 ```
 
+## Primary Branch
+
+This repository uses `master` as its primary branch name.
+
+The name is used solely as a technical identifier, following the long-standing
+convention historically used by Git. It does not express or imply any
+association with racism, slavery, discrimination, or any political or social
+ideology.
+
 ## License
 
-All public web content that I publish is licensed under the following conditions, unless otherwise noted:
+All public web content that I publish is licensed under the following
+conditions, unless otherwise noted:
 
-- **Code**: dual licensed under [GPL version 3](https://www.gnu.org/licenses/gpl-3.0.html) or [LGPL version 3](https://www.gnu.org/licenses/lgpl-3.0.html)
-- **Documentation, photos, and images**: licensed under [CC BY-ND 4.0 International](https://creativecommons.org/licenses/by-nd/4.0/)
+- **Code**: dual licensed under
+  [GPL version 3](https://www.gnu.org/licenses/gpl-3.0.html) or
+  [LGPL version 3](https://www.gnu.org/licenses/lgpl-3.0.html)
+- **Documentation, photos, and images**: licensed under
+  [CC BY-ND 4.0 International](https://creativecommons.org/licenses/by-nd/4.0/)
 
 For full details, please refer to the license texts:
 
